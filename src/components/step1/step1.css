@@ -1,0 +1,53 @@
+form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+label{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+}
+
+input{
+    margin:5px 0px;
+    padding: 10px 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+input::placeholder{
+    color: black;
+    font-weight: 600;
+    opacity: 0.2;
+    font-family: inherit;
+}
+
+.navContainer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
+.error {
+    border: 1px solid red;
+}
+  
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    position:relative;
+    bottom: 80px;
+    left: 380px;
+    display: flex;
+    justify-content: end;
+    width: 200px;
+}
