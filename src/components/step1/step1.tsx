@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./step1.css";
 
+interface ErrorState {
+  name?: string;
+  email?: string;
+  number?: string;
+}
+
 const Step1 = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<ErrorState>({});
   const navigate = useNavigate();
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,26 +28,26 @@ const Step1 = () => {
   };
 
   const validateForm = () => {
-    const errors = {};
+    const validationErrors: ErrorState = {};
 
     if (!name.trim()) {
-      errors.name = "Name is required";
+      validationErrors.name = "Name is required";
     }
 
     if (!email.trim()) {
-      errors.email = "Email is required";
+      validationErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = "Invalid email address";
+      validationErrors.email = "Invalid email address";
     }
 
     if (!number.trim()) {
-      errors.number = "Phone number is required";
+      validationErrors.number = "Phone number is required";
     } else if (!/^\+?\d+$/.test(number)) {
-      errors.number = "Invalid phone number";
+      validationErrors.number = "Invalid phone number";
     }
 
-    setErrors(errors);
-    return Object.keys(errors).length === 0;
+    setErrors(validationErrors);
+    return Object.keys(validationErrors).length === 0;
   };
 
   const handleStep1 = () => {
@@ -92,11 +98,11 @@ const Step1 = () => {
         </label>
         </form>
       </div>
-      <div className="navContainer">
-        <button id="goBackBtn" style={{ display: "none" }}>
+      <div className="navContainer step1">
+        <button className="goBackBtn">
           Go back
         </button>
-        <button id="nextBtn" onClick={handleStep1}>
+        <button className="nextBtn" onClick={handleStep1}>
           Next Step
         </button>
       </div>

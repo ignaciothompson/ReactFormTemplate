@@ -1,0 +1,121 @@
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.planCard{
+    width: calc(33% - 15px);
+    border: 3px solid hsl(230, 23%, 90%);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.planCard.active{
+    border: 3px solid hsl(213, 96%, 18%);
+}
+
+.planIcon{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.planInfo{
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.planTitle{
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 0;
+}
+
+.planPrice{
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: hsl(231, 11%, 77%);
+}
+
+.planPriceDiscount{
+    margin-top: 0;
+    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+}
+
+.timeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    background-color: hsl(230, 23%, 90%);
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+.time{
+    color: hsl(240, 2%, 67%);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.selected{
+    color: hsl(213, 96%, 18%);
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.7em;
+    height: 1.8em;
+    margin: 0px 20px 0px 20px;
+   }
+   
+   .switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(213, 96%, 18%);
+    transition: .2s;
+    border-radius: 30px;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: white;
+    transition: .4s;
+   }
+   
+   input:checked + .slider::before {
+    background-color: white;
+   }
+   
+   input:checked + .slider {
+    background-color: hsl(213, 96%, 18%);
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px hsl(213, 96%, 18%);
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.9em);
+   }
+

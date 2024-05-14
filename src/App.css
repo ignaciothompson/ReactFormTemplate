@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
@@ -7,4 +9,6 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+
+  font-family: 'Ubuntu', sans-serif;
 }

@@ -1,6 +1,6 @@
 .sidebarContainer{
     margin: auto;
-    background-image: url('../../assets/images/bg-sidebar-desktop.svg');
+    background-image: url('/images/bg-sidebar-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 33.3333%;
@@ -28,6 +28,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.circle.active{
+    background-color: hsl(228, 100%, 84%);
+    color: hsl(213, 96%, 18%) ;
+    border: transparent;
 }
 
 .stepNum{

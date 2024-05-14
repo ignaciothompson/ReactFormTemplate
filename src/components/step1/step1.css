@@ -20,6 +20,7 @@ input{
     border: 1px solid lightgray;
     height: 20px;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 input::placeholder{
@@ -29,12 +30,16 @@ input::placeholder{
     font-family: inherit;
 }
 
-.navContainer{
+.navContainer.step1{
     width: 80%;
     margin: auto;
     display: flex;
     justify-content:flex-end;
     align-items: center;
+}
+
+.navContainer.step1 .goBackBtn{
+    display: none;
 }
 
 .error {
