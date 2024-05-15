@@ -8,6 +8,7 @@ label{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    font-size: 18px;
     color: hsl(213, 96%, 18%);
     font-weight: 600;
 }

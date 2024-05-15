@@ -2,6 +2,19 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./step1.css";
 
+interface Order {
+  name: string;
+  email: string;
+  number: string;
+  plan: string;
+  time: string;
+  extraOptions: {
+    online: boolean;
+    storage: boolean;
+    profile: boolean;
+  };
+}
+
 interface ErrorState {
   name?: string;
   email?: string;
@@ -50,9 +63,26 @@ const Step1 = () => {
     return Object.keys(validationErrors).length === 0;
   };
 
+  const handleOrder = () => {
+    const order: Order = {
+      name,
+      email,
+      number,
+      plan: '',
+      time: '',
+      extraOptions: {
+        online: false,
+        storage: false,
+        profile: false
+      }
+    };
+    localStorage.setItem('order', JSON.stringify(order));
+    // console.log(order);
+  }
+
   const handleStep1 = () => {
     if (validateForm()) {
-      // Proceed to the next step
+      handleOrder();
       navigate("/step2");
     }
   };

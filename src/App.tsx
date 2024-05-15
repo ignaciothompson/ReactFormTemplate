@@ -4,11 +4,11 @@ import Step1 from './components/step1/step1.tsx';
 import Step2 from './components/step2/step2.tsx';
 import Step3 from './components/step3/step3.tsx';
 import Step4 from './components/step4/step4.tsx';
+import Thanks from './components/thanks/thanks.tsx';
 import './App.css'
 
 
 function App() {
-  
 
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
         <Route path="/step2" element={<Step2 />} />
         <Route path="/step3" element={<Step3 />} />
         <Route path="/step4" element={<Step4 />} />
+        <Route path="/thanks" element={<Thanks />} />
       </Routes>
     </Layout>
   </Router>

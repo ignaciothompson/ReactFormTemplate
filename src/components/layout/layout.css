@@ -20,7 +20,12 @@
     width: 80%;
     height: 80%;
     margin: auto;
-    /* background-color: brown; */
+}
+
+.thanksContainer{
+    width: 80%;
+    height: auto;
+    margin: auto;
 }
 
 .navContainer{

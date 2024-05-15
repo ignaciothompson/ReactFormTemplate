@@ -1,0 +1,49 @@
+.addOnsContainer{
+    margin-top: 50px;
+}
+
+.addOns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid hsl(230, 23%, 90%);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.addOns:last-child{
+    margin-bottom: 0;
+}
+
+.checkBox{
+    width: 10%;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.addOnsInfo{
+    width: 80%;
+
+    h3{
+        color: hsl(213, 96%, 18%);
+        margin-bottom: 0;
+    }
+
+    p{
+        color: hsl(231, 11%, 77%);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.addOnsPrice{
+    width: 10%;
+    margin-right: 15px;
+    color: hsl(243, 100%, 62%);
+}
+
+.activeAddOn{
+    border:  3px solid hsl(213, 96%, 18%);
+}

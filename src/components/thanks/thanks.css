@@ -1,0 +1,24 @@
+.thanks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.thanksTitle{
+    width: 100%;
+    text-align: center;
+}
+
+.thanksText{
+    width: 80%;
+    text-align: center;
+}
