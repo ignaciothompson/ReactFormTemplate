@@ -1,3 +1,6 @@
-# This is a template for a Multi Step Form build with React
+# 3/20
+ This is a template for a Multi Step Form build with React
+
+![Multi Step Form](/images/GamingFormTemplate.png)
 
 
